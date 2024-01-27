@@ -19,7 +19,7 @@ function App() {
   }, [])
   const productsList = products.map((product) => {
       return (
-        <Link to={`product/${product.id}`} className='productCard' key={product.id}>
+        <Link to={`/product/${product.id}`} className='productCard' key={product.id}>
           <div className='productImage'><img src={product.image} /></div>
           <div className='productOverview'>
             <div className='productTitle'>{product.title}</div>
