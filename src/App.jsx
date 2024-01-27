@@ -2,8 +2,6 @@ import './App.css'
 import { useEffect, useState } from "react";
 import Caroseul from './Components/Caroseul';
 
-//TODO: cart page, confirm?, ordered page
-
 function App() {
   const [products, setProducts] = useState([])
   const [err, setErr] = useState(null)

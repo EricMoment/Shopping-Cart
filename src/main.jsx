@@ -30,7 +30,7 @@ const router = createBrowserRouter([
       },
     ]
   }
-]);
+], {basename: '/Shopping-Cart/'});
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
