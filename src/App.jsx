@@ -1,6 +1,7 @@
 import './App.css'
 import { useEffect, useState } from "react";
 import Caroseul from './Components/Caroseul';
+import { Link } from 'react-router-dom';
 
 function App() {
   const [products, setProducts] = useState([])
@@ -18,14 +19,14 @@ function App() {
   }, [])
   const productsList = products.map((product) => {
       return (
-        <a href={`product/${product.id}`} className='productCard' key={product.id}>
+        <Link to={`product/${product.id}`} className='productCard' key={product.id}>
           <div className='productImage'><img src={product.image} /></div>
           <div className='productOverview'>
             <div className='productTitle'>{product.title}</div>
             <div className='productCategory'>{product.category[0].toUpperCase() + product.category.slice(1)}</div>
             <div className='productPrice'>€{parseFloat(product.price).toFixed(2)}</div>
           </div>
-        </a>
+        </Link>
       )
     })
   return (
